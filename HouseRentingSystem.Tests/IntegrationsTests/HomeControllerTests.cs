@@ -21,7 +21,7 @@ namespace HouseRentingSystem.Tests.IntegrationsTests
             var result = this.homeController.Error(statusCode);
 
             // Assert the returned result is not null
-            Assert.IsNotNull(result);
+            Assert.IsNull(result);
 
             // Assert the returned result is a view
             var viewResult = result as ViewResult;
