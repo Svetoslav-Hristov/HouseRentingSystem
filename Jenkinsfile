@@ -11,13 +11,13 @@ pipeline {
 
         stage('Build Code') {
             steps {
-                bat 'dotnet build'
+                bat 'dotnet build --no-restore'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'dotnet test'
+                bat 'dotnet test --no-build --verbosity normal'
             }
         }
     }
